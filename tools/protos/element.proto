@@ -1,0 +1,92 @@
+syntax="proto3";
+package test;
+
+option java_multiple_files=true;
+option java_outer_classname="ElementDef";
+
+message Battle {
+    int32 id = 1;
+
+    message Player {
+        int32 id = 1;
+        string name = 2;
+        float x = 3;
+        float y = 4;
+        map<int32, Skill> skill = 5;
+    }
+
+    message Skill {
+        int32 id = 1;
+    }
+}
+
+enum Response {
+    OK = 0;
+    NO = 1;
+}
+
+message Element {
+    message Type {
+        int32 id = 1;
+    }
+    bool bool_value = 1;
+    float float_value = 2;
+    double double_value = 3;
+    int32 int32_value = 4;
+    int64 int64_value = 5;
+    uint32 uint32_value = 6;
+    uint64 uint64_value = 7;
+    sint32 sint32_value = 8;
+    sint64 sint64_value = 9;
+    fixed32 fixed32_value = 10;
+    fixed64 fixed64_value = 11;
+    sfixed32 sfixed32_value = 12;
+    sfixed64 sfixed64_value = 13;
+    string string_value = 14;
+    bytes bytes_value = 15;
+    Type type = 16;
+    Battle.Player player = 17;
+    Battle.Skill skill = 18;
+
+    oneof union {
+        bool union_bool_value = 19;
+        float union_float_value = 20;
+        double union_double_value = 21;
+        int32 union_int32_value = 22;
+        int64 union_int64_value = 23;
+        uint32 union_uint32_value = 24;
+        uint64 union_uint64_value = 25;
+        sint32 union_sint32_value = 26;
+        sint64 union_sint64_value = 27;
+        fixed32 union_fixed32_value = 28;
+        fixed64 union_fixed64_value = 29;
+        sfixed32 union_sfixed32_value = 30;
+        sfixed64 union_sfixed64_value = 31;
+        string union_string_value = 32;
+        bytes union_bytes_value = 33;
+        Type union_type = 34;
+        Battle.Player union_player = 35;
+        Battle.Skill union_skill = 36;
+    }
+
+    repeated bool bool_values = 37;
+    repeated float float_values = 38;
+    repeated double double_values = 39;
+    repeated int32 int32_values = 40;
+    repeated int64 int64_values = 41;
+    repeated uint32 uint32_values = 42;
+    repeated uint64 uint64_values = 43;
+    repeated sint32 sint32_values = 44;
+    repeated sint64 sint64_values = 45;
+    repeated fixed32 fixed32_values = 46;
+    repeated fixed64 fixed64_values = 47;
+    repeated sfixed32 sfixed32_values = 48;
+    repeated sfixed64 sfixed64_values = 49;
+    repeated string string_values = 50;
+    repeated bytes bytes_values = 51;
+    repeated Type types = 52;
+    repeated Battle.Player players = 53;
+    repeated Battle.Skill skills = 54;
+
+    Response resp = 55;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/protobuf-as3/protobuf-as3.iml" filepath="$PROJECT_DIR$/protobuf-as3/protobuf-as3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/protobuf-java/protobuf-java.iml" filepath="$PROJECT_DIR$/protobuf-java/protobuf-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/protoc-as3/protoc-as3.iml" filepath="$PROJECT_DIR$/protoc-as3/protoc-as3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-as3/test-as3.iml" filepath="$PROJECT_DIR$/test-as3/test-as3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-java/test-java.iml" filepath="$PROJECT_DIR$/test-java/test-java.iml" />
+    </modules>
+  </component>
+</project>
