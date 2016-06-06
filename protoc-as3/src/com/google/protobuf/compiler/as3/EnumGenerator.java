@@ -30,7 +30,7 @@ public class EnumGenerator implements IGenerator {
             _variables.put("field_name", field.getName());
             _variables.put("field_value", String.valueOf(field.getNumber()));
             printer.writeln(_variables, "" +
-                    "    public static const #field_name#:#class# = new #class#(#field_value#);");
+                    "    public static const #field_name#:#class# = new #class#(\"#field_name#\", #field_value#);");
             if (field.getNumber() == 0) {
                 _variables.put("default_field_value", field.getName());
             }
@@ -38,8 +38,8 @@ public class EnumGenerator implements IGenerator {
 
         printer.writeln();
         printer.writeln(_variables, "" +
-                "    public function #class#(value:int) {\n" +
-                "        super(value);\n" +
+                "    public function #class#(name:String, value:int) {\n" +
+                "        super(name, value);\n" +
                 "    }\n" +
                 "    \n" +
                 "    public static function valueOf(value:int):#class# {\n" +
