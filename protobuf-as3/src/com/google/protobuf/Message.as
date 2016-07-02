@@ -1,4 +1,5 @@
 package com.google.protobuf {
+import flash.utils.ByteArray;
 import flash.utils.Dictionary;
 
 public class Message {
@@ -9,6 +10,12 @@ public class Message {
     }
 
     public function readFrom(input:CodedInputStream):void {
+    }
+
+    public static function toByteArray(message:Message):ByteArray {
+        var bytes:ByteArray = new ByteArray();
+        message.writeTo(new CodedOutputStream(bytes));
+        return bytes;
     }
 }
 }
